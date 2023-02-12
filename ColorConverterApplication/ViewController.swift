@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         hexToRgb()// HEX to RGB
         }
     }
-    // rgb to hext converter function
+    // rgb to hext converter function with guard let usage
     func rgbToHex(){
         guard let redValue = UInt8(redTextField.text ?? "") else {return }
         guard let greenValue = UInt8(greenTextField.text ?? "") else {return}
