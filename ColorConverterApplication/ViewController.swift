@@ -32,10 +32,10 @@ class ViewController: UIViewController {
      if you realize that function parameter there is an underscore chracter. That meaning is there is no required to parameters definition word.
      */
     @IBAction func segmentController(_ sender: UISegmentedControl) {
-        currentIndex = sender.selectedSegmentIndex
+        currentIndex = sender.selectedSegmentIndex   // sender is object and comes from segmenController function. it gives us some datas about component.
         getDefault()
         if currentIndex == 0 {
-            convertButton.setTitle("RGB to HEX", for: UIControl.State.normal)
+            convertButton.setTitle("RGB to HEX", for: UIControl.State.normal)            
         }else{
             convertButton.setTitle("HEX to RGB", for: UIControl.State.normal)
         }
@@ -61,11 +61,11 @@ class ViewController: UIViewController {
     }
     // rgb to hext converter function with guard let usage
     func rgbToHex(){
-        guard let redValue = UInt8(redTextField.text ?? "") else {return }
+        guard let redValue = UInt8(redTextField.text ?? "") else {return }          //guard let alternative usage of if let block. it is more short.
         guard let greenValue = UInt8(greenTextField.text ?? "") else {return}
         guard let blueValue = UInt8(blueTextField.text ?? "") else {return}
         print("check values \(redValue) \(blueValue) \(greenValue)")
-        let redHexValue = String(format: "%2X", redValue)
+        let redHexValue = String(format: "%2X", redValue)                                //These are color converter processing.
         let greenHexValue = String(format: "%2X", greenValue)
         let blueHexValue = String(format: "%2X", blueValue)
         colorCodeSeem.text = "HEX Code: # \(redHexValue) \(greenHexValue) \(blueHexValue)"
