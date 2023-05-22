@@ -5,6 +5,9 @@
 //  Created by Semih Ekmen on 4.02.2023.
 //
 
+
+//. SEGMENT CONTROLLER USAGE
+
 import UIKit
 
 class ViewController: UIViewController {
